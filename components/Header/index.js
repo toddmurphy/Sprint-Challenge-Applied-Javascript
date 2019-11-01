@@ -13,7 +13,7 @@
 const headerMain = document.querySelector('.header-container');
 headerMain.appendChild(Header('March 28, 2019', 'Lambda Times', '98 degrees'));
 
-function Header(date, title, temperature) {
+function Header(dateNow, titleLambda, temperatureToday) {
   //Create elements
   const header = document.createElement('div'); // main element to append other elements
   const date = document.createElement('span');
@@ -32,9 +32,9 @@ function Header(date, title, temperature) {
   temperature.classList.add('temp');
 
   //Set up text content
-  date.textContent = date;
-  title.textContent = title;
-  temperature.textContent = temperature;
-
+  date.textContent = dateNow;
+  title.textContent = titleLambda;
+  temperature.textContent = temperatureToday;
+  console.log(header);
   return header;
 }
