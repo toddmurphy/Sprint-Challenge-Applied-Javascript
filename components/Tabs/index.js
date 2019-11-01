@@ -39,7 +39,7 @@ function tabComponent(data) {
   tab.classList.add('tab');
 
   //Set the text content
-  tab.textContent = data.topics;
+  tab.textContent = data;
 
   //   console.log(tab);
   return tab;
