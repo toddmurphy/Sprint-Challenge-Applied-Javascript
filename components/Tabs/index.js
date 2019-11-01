@@ -7,7 +7,9 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
-const topics = document.querySelector('.topics');
+//Need to make more clear descriptive names for top level containers such as topicsContainer,
+//I had to change this because my data object had the same name  css class name -> topics
+const topicsContainer = document.querySelector('.topics');
 
 axios
   .get('https://lambda-times-backend.herokuapp.com/topics')
@@ -15,7 +17,7 @@ axios
     console.log(response);
     response.data.topics.forEach(item => {
       //   console.log(item); //outputs 'javascript'
-      topics.appendChild(tabComponent(item)); //'javascript' should go here about then go to 'data' in tabComponent(data)
+      topicsContainer.appendChild(tabComponent(item)); //'javascript' should go here about then go to 'data' in tabComponent(data)
       //   document.querySelector('topics').appendChild(tabComponent(item));
     });
   })
@@ -24,7 +26,7 @@ axios
   });
 
 function tabComponent(data) {
-  console.log(data);
+  // console.log(typeof data);
   //create the element
   const tab = document.createElement('div');
 
