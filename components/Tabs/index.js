@@ -9,16 +9,12 @@
 //    <div class="tab">topic here</div>
 const topics = document.querySelector('.topics');
 
-// response.data.articles.bootstrap.forEach(item => {
-//   cards.appendChild(lambdaCard(item));
-// });
-
 axios
   .get('https://lambda-times-backend.herokuapp.com/topics')
   .then(response => {
     console.log(response);
     response.data.topics.forEach(item => {
-      console.log(item); //outputs 'javascript'
+      //   console.log(item); //outputs 'javascript'
       topics.appendChild(tabComponent(item)); //'javascript' should go here about then go to 'data' in tabComponent(data)
       //   document.querySelector('topics').appendChild(tabComponent(item));
     });
@@ -30,10 +26,7 @@ axios
 function tabComponent(data) {
   console.log(data);
   //create the element
-  //   console.log(data);
   const tab = document.createElement('div');
-
-  //Set up structure of elements
 
   //Set the class name
   tab.classList.add('tab');

@@ -23,24 +23,29 @@ const cards = document.querySelector('.cards-container');
 
 //axios get request
 
-axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
-  // console.log(response);
-  response.data.articles.bootstrap.forEach(item => {
-    cards.appendChild(lambdaCard(item));
+axios
+  .get('https://lambda-times-backend.herokuapp.com/articles')
+  .then(response => {
+    // console.log(response);
+    response.data.articles.bootstrap.forEach(item => {
+      cards.appendChild(lambdaCard(item));
+    });
+    response.data.articles.javascript.forEach(item => {
+      cards.appendChild(lambdaCard(item));
+    });
+    response.data.articles.jquery.forEach(item => {
+      cards.appendChild(lambdaCard(item));
+    });
+    response.data.articles.node.forEach(item => {
+      cards.appendChild(lambdaCard(item));
+    });
+    response.data.articles.technology.forEach(item => {
+      cards.appendChild(lambdaCard(item));
+    });
+  })
+  .catch(error => {
+    console.log(error);
   });
-  response.data.articles.javascript.forEach(item => {
-    cards.appendChild(lambdaCard(item));
-  });
-  response.data.articles.jquery.forEach(item => {
-    cards.appendChild(lambdaCard(item));
-  });
-  response.data.articles.node.forEach(item => {
-    cards.appendChild(lambdaCard(item));
-  });
-  response.data.articles.technology.forEach(item => {
-    cards.appendChild(lambdaCard(item));
-  });
-});
 
 //create 'lambdaCard' functional component
 function lambdaCard(data) {
