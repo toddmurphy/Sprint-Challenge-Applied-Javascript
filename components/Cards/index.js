@@ -79,6 +79,7 @@ function lambdaCard(data) {
   authorName.classList.add('span');
 
   //Set up textContent -> to pass data down to from 'lambdaCard' -> from the axios data set
+  headline.textContent = data.headline;
   authorName.textContent = data.authorName;
   image.src = data.authorPhoto;
 
