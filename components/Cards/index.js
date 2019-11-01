@@ -24,12 +24,37 @@ const cards = document.querySelector('.cards-container');
 //axios get request
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
-  const articlesResult = Object.values(response.data);
-  console.log(articlesResult);
+  console.log(response);
+  const bootstrap = response.data.articles.bootstrap.forEach(item => {
+    console.log(item);
+    const bootstrapCard = lambdaCard(item);
+    cards.appendChild(lambdaCard(bootstrapCard));
+  });
+  const javascript = response.data.articles.javascript.forEach(item => {
+    console.log(item);
+    const javascriptCard = lambdaCard(item);
+    cards.appendChild(lambdaCard(javascriptCard));
+  });
+  const jquery = response.data.articles.jquery.forEach(item => {
+    console.log(item);
+    const jqueryCard = lambdaCard(item);
+    cards.appendChild(jqueryCard);
+  });
+  const node = response.data.articles.node.forEach(item => {
+    console.log(item);
+    const nodeCard = lambdaCard(item);
+    cards.appendChild(nodeCard);
+  });
+  const technology = response.data.articles.technology.forEach(item => {
+    console.log(item);
+    const technologyCard = lambdaCard(item);
+    cards.appendChild(technologyCard);
+  });
 });
 
 //create 'lambdaCard' functional component
-function lambdaCard() {
+function lambdaCard(data) {
+  console.log(data);
   //Create elements
   const card = document.createElement('div'); //main parent we append all elements -> need to return card
   const headline = document.createElement('div');
@@ -54,6 +79,9 @@ function lambdaCard() {
   authorName.classList.add('span');
 
   //Set up textContent -> to pass data down to from 'lambdaCard' -> from the axios data set
+  authorName.textContent = data.authorName;
+  image.src = data.authorPhoto;
+
   console.log(card);
   return card;
 } //This closes lambdaCard component

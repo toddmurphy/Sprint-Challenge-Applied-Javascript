@@ -35,6 +35,6 @@ function Header(dateNow, titleLambda, temperatureToday) {
   date.textContent = dateNow;
   title.textContent = titleLambda;
   temperature.textContent = temperatureToday;
-  console.log(header);
+  //   console.log(header);
   return header;
 }
