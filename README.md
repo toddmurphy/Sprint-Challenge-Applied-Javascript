@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is located or built into the browser (window) that is a representation of our html and js code that we build application. We can test our code and see what will show up in the DOM and then represented on the DOM/window.
+
 2. What is an event?
+
+An event is something that you do on any web page, such as you type information in a form, you or click on a button.
 
 3. What is an event listener?
 
+An event listener is a method, such as: click, scroll, mouseover, keypress that fires an action when a button or specifc event or thing that happens. This helps give our application dynamic contact such as submitting a form request to a server. You click a button, that button fires an event and the listener submits the form.
+
 4. Why would we convert a NodeList into an Array?
 
+We would convert a NodeList to an array so we can loop over it using a forEach or map method, or other array methods.
+
 5. What is a component?
+
+A component is a function that you build to be a stand alone piece of code that you can resuse. A component could be a header, card, button, or anything that you can reuse in your code to DRY up your code.
 
 ### Git Set up
 
