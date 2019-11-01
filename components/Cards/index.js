@@ -24,7 +24,7 @@ const cards = document.querySelector('.cards-container');
 //axios get request
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response => {
-  console.log(response);
+  // console.log(response);
   response.data.articles.bootstrap.forEach(item => {
     cards.appendChild(lambdaCard(item));
   });
@@ -44,7 +44,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles').then(response =
 
 //create 'lambdaCard' functional component
 function lambdaCard(data) {
-  console.log(data);
+  // console.log(data);
   //Create elements
   const card = document.createElement('div'); //main parent we append all elements -> need to return card
   const headline = document.createElement('div');
@@ -73,6 +73,6 @@ function lambdaCard(data) {
   authorName.textContent = data.authorName;
   image.src = data.authorPhoto;
 
-  console.log(card);
+  // console.log(card);
   return card;
 } //This closes lambdaCard component

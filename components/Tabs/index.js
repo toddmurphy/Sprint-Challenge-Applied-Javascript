@@ -7,20 +7,30 @@
 //
 //  The tab component should look like this:
 //    <div class="tab">topic here</div>
-// const topics = document.querySelector('topics');
+const topics = document.querySelector('.topics');
 
-axios.get('https://lambda-times-backend.herokuapp.com/topics').then(response => {
-  console.log(response.data.topics);
-  response.data.topics.forEach(item => {
-    // console.log(item);
-    document.querySelector('topics').appendChild(tabComponent(item));
+// response.data.articles.bootstrap.forEach(item => {
+//   cards.appendChild(lambdaCard(item));
+// });
+
+axios
+  .get('https://lambda-times-backend.herokuapp.com/topics')
+  .then(response => {
+    console.log(response);
+    response.data.topics.forEach(item => {
+      console.log(item); //outputs 'javascript'
+      topics.appendChild(tabComponent(item)); //'javascript' should go here about then go to 'data' in tabComponent(data)
+      //   document.querySelector('topics').appendChild(tabComponent(item));
+    });
+  })
+  .catch(error => {
+    console.log(error);
   });
-  //   topics.appendChild(tabComponent(response.data.topics));
-});
 
 function tabComponent(data) {
-  //create the element
   console.log(data);
+  //create the element
+  //   console.log(data);
   const tab = document.createElement('div');
 
   //Set up structure of elements
@@ -29,7 +39,7 @@ function tabComponent(data) {
   tab.classList.add('tab');
 
   //Set the text content
-  tab.textContent = data;
+  tab.textContent = data.topics;
 
   //   console.log(tab);
   return tab;
