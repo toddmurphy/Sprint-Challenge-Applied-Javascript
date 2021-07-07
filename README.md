@@ -30,41 +30,53 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM is located or built into the browser (window) that is a representation of our html and js code that we build application. We can test our code and see what will show up in the DOM and then represented on the DOM/window.
+
 2. What is an event?
+
+An event is something that you do on any web page, such as you type information in a form, you or click on a button.
 
 3. What is an event listener?
 
+An event listener is a method, such as: click, scroll, mouseover, keypress that fires an action when a button or specifc event or thing that happens. This helps give our application dynamic contact such as submitting a form request to a server. You click a button, that button fires an event and the listener submits the form.
+
 4. Why would we convert a NodeList into an Array?
+
+We would convert a NodeList to an array so we can loop over it using a forEach or map method, or other array methods.
 
 5. What is a component?
 
+A component is a function that you build to be a stand alone piece of code that you can resuse. A component could be a header, card, button, or anything that you can reuse in your code to DRY up your code.
+
 ### Git Set up
 
-* [ ] Fork the project into your GitHub user account
-* [ ] Clone the forked project into a directory on your machine
-* [ ] Create a pull request before you start working on the project requirements.  You will continuously push your updates throughout the project.
-* [ ] You are now ready to build this project with your preferred IDE
+- [ ] Fork the project into your GitHub user account
+- [ ] Clone the forked project into a directory on your machine
+- [ ] Create a pull request before you start working on the project requirements. You will continuously push your updates throughout the project.
+- [ ] You are now ready to build this project with your preferred IDE
 
 ## Minimum Viable Product
 
 Your finished project must include all of the following requirements:
 
-* [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
+- [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
-* [ ] Following the instructions in the `Header/index.js` file, create the Header component. 
+- [ ] Following the instructions in the `Header/index.js` file, create the Header component.
 
-* [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
+- [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
-* [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
+- [ ] Following the instructions in the `Cards/index.js` file, create individual Cards components.
 
 ## Stretch Problems
 
 Your stretch challenge is to write the functionality of a `Carousel` component. This is an advanced challenge, so you are not expected to be able to complete it. If you begin and don't finish, you should still submit with what you have. This is going to be a bit different because you are going to need to create some advanced functionality for the carousel. There is no need to request data for this exercise.
 
-* [ ] Complete the carousel functionality in `Carousel.js`
+- [ ] Complete the carousel functionality in `Carousel.js`
 
-* [ ] If you complete the Carousel, add functionality so that the carousel slides when the buttons are pressed instead of just appearing.
+- [ ] If you complete the Carousel, add functionality so that the carousel slides when the buttons are pressed instead of just appearing.
 
-* [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
+- [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
 
-* [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
+- [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
+
+# First commit for applied js sprint challenge
